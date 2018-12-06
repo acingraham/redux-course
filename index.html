@@ -1,0 +1,285 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Flatiron - Redux</title>
+
+		<link rel="shortcut icon" href="/favicon.ico" />
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<style>
+			.reveal h3 {
+				/*color: #5051DB;*/
+				/*color: #3887F7;*/
+			}
+
+			strong {
+				color: #5051DB;
+			}
+
+			.reveal section img {
+				max-height: 100vh;
+			}
+		</style>
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h3>Intro to Redux</h3>
+					<hr>
+					<a href="https://bit.ly/fh-redux" target="_blank">bit.ly/fh-redux</a>
+				</section>
+				<section>
+					<h3>Overview of the workshop</h3>
+					<ol>
+						<li>TODO</li>
+						<li>Intro to Redux (30-45 min)</li>
+						<li>Redux Exercises & Challenges (75-90 min)</li>
+					</ol>
+				</section>
+
+				<section>
+					<h3>Intro to Redux</h3>
+				</section>
+
+				<section>
+					<h3>AngularJS</h3>
+					<ul>
+						<li>MVC JavaScript framework</li>
+						<li>Provides features and ability to extend HTML</li>
+						<li>Two-way data binding</li>
+						<li>Oriented toward single page applications (SPAs)</li>
+					</ul>
+				</section>
+
+				<section>
+					<section>
+                        <h3>Hello <strike>world</strike> math</h3>
+						<iframe src="https://codesandbox.io/embed/v0w75lrqw0" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
+					</section>
+					<section>
+						<ol>
+							<li>Add a script tag to include AngularJS</li>
+							<li>Add <strong>ng-app</strong> to indicate what AngularJS should own</li>
+							<li>Add AngularJS expression</li>
+						</ol>
+					</section>
+					<section>
+						<h3>Hello <strike>world</strike> math</h3>
+						<iframe src="https://codesandbox.io/embed/ryz4oyynn" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h3>Hello world with two-way data binding</h3>
+						<iframe src="https://codesandbox.io/embed/n34oq23p9p" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
+					</section>
+					<section>
+						<ol>
+							<li>Use the <strong>ng-model</strong> directive to write data</li>
+							<li>Use <strong>{{ }}</strong> to read data</li>
+						</ol>
+					</section>
+					<section>
+						<h3>Hello world with two-way data binding</h3>
+						<iframe src="https://codesandbox.io/embed/x349pk0mpp" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
+					</section>
+				</section>
+
+				<section>
+					<h3>Next Steps</h3>
+					<ul>
+						<li>Scope</li>
+						<li>Modules</li>
+						<li>Controllers</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Scope</h3>
+					<ul>
+						<li>The glue between the application controller and the view (HTML)</li>
+						<li>It's (basically) just a JavaScript object</li>
+						<li>It's the context Angular expressions are executed in</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Modules</h3>
+					<ul>
+						<li>Allow us to break up our application</li>
+						<li>Give us access to a lot more of Angular's features</li>
+					</ul>
+
+					<iframe height='265' scrolling='no' title='Module Example' src='//codepen.io/andrew_404/embed/mQYNoW/?height=265&theme-id=0&default-tab=html,result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/andrew_404/pen/mQYNoW/'>Module Example</a> by Andrew (<a href='https://codepen.io/andrew_404'>@andrew_404</a>) on <a href='https://codepen.io'>CodePen</a>.
+					</iframe>
+				</section>
+
+				<section>
+					<h3>Controller</h3>
+					<ul>
+						<li>Controls flow of data within our application</li>
+						<li>Accepts $scope as a parameter, which refers to the application/module that the controller needs to handle</li>
+					</ul>
+
+					<iframe height='265' scrolling='no' title='Controller Example' src='//codepen.io/andrew_404/embed/VVJZKp/?height=265&theme-id=0&default-tab=html,result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/andrew_404/pen/VVJZKp/'>Controller Example</a> by Andrew (<a href='https://codepen.io/andrew_404'>@andrew_404</a>) on <a href='https://codepen.io'>CodePen</a>.
+					</iframe>
+				</section>
+
+
+				<section>
+					<section>
+						<h3>Let's walk through that</h3>
+						<iframe src="https://codesandbox.io/embed/6y25qj6kqk" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
+					</section>
+					<section>
+						<h3>In index.html:</h3>
+						<ol>
+							<li>Include a script tag after the angular script tag to include App.js</li>
+							<li>Set <strong>ng-app</strong> to the name of your module</li>
+							<li>Add <strong>ng-controller</strong> and set to the name of your controller</li>
+							<li>Access values provided in controller</li>
+						</ol>
+					</section>
+					<section>
+						<h3>In App.js:</h3>
+						<ol>
+							<li>Create a module</li>
+							<li>Create a controller in the module</li>
+							<li>Set values in $scope</li>
+						</ol>
+					</section>
+					<section>
+						<h3>Result</h3>
+						<iframe src="https://codesandbox.io/embed/4w96xx9r34" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
+					</section>
+				</section>
+
+				<section>
+					<section>
+                        <h3>ng-click</h3>
+                        <ul>
+                            <li>Evaluates expression when element is clicked</li>
+                        </ul>
+
+                        <iframe src="https://codesandbox.io/embed/n0x842l62j" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
+					</section>
+
+					<section>
+                        <h3>ng-click</h3>
+                        <ul>
+                            <li>Defining a function instead</li>
+                        </ul>
+
+						<iframe src="https://codesandbox.io/embed/wz9x04p1w7" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
+					</section>
+
+					<section>
+                        <h3>ng-click</h3>
+                        <ul>
+                            <li>Defining a function instead result</li>
+                        </ul>
+
+						<iframe src="https://codesandbox.io/embed/52ok9o27x" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h3>Your turn!</h3>
+						<p>This is a link to the solution</p>
+						<p>I strongly recommend working it out the solution your own without looking at it!</p>
+						<a href="https://codesandbox.io/s/5k8v09vx4x" target="_blank">Demo</a>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h3>Your Turn!</h3>
+						<ul>
+                            <li>Start by making it so when the user enters the text, it appears in the appropriate fields</li>
+                            <li>Here's a link with some starter code:
+                                <a href="https://codesandbox.io/s/812jpjxn2" target="_blank">Codesandbox</a>
+                            </li>
+							<li>Once you've completed that, go on to the next slide!</li>
+						</ul>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h3>Your Turn!</h3>
+						<ul>
+                            <li>Add a Reset button that will clear all the inputs</li>
+							<li>Once you've completed that, go on to the next slide!</li>
+						</ul>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h3>Your Turn!</h3>
+						<ul>
+                            <li>Add a button that will show and hide the results when clicked.  It should start with the results not being shown.</li>
+							<li>You'll need to look up how to use a directive called <strong>ng-show</strong>!</li>
+							<li>Bonus points for having the button text change from "Show" when the results are hidden to "Hide" when the results are shown</li>
+							<li>If you complete this, feel free to change the Mad Lib text, add extra inputs, or just let me know and I can give you show additional challenges</li>
+						</ul>
+					</section>
+				</section>
+
+				<section>
+                    <section>
+                        <h3>ng-repeat</h3>
+
+                        <iframe src="https://codesandbox.io/embed/48y33mkxl4" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
+                    </section>
+
+                    <section>
+                        <h3>ng-repeat</h3>
+                        <iframe src="https://codesandbox.io/embed/zl6qq9l4wx" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
+                    </section>
+				</section>
+
+
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				],
+                history: true,
+			});
+		</script>
+	</body>
+</html>
